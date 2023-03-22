@@ -1,0 +1,5 @@
+com/example/spacezinhomedecor/BuildConfig.java
+ com.example.spacezinhomedecor.BuildConfig
+com/example/spacezinhomedecor/MainActivity.java
+ com.example.spacezinhomedecor.MainActivity
+ com.example.spacezinhomedecor.MainActivity$mywebClient

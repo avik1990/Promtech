@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.store.promtech"
+    tools:ignore="LockedOrientationActivity">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.store.promtech.ImageFullActivity"
+            android:exported="true"/>
+        <activity android:name="com.store.promtech.OrderProductDetailsActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.store.promtech.WalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.store.promtech.PushTestActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.store.promtech.TimeSlotActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.OfferDetailsDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.DashboardSlidingProductDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.DealsforYouProductDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.store.promtech.DashboardDealsforYouProductDetails"
+            android:exported="true"/>
+        <activity
+            android:name="com.store.promtech.DealsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.store.promtech.SeasonalProductDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.DashboardSeasonalProductDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+<activity
+            android:name="com.store.promtech.Shippingactivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+
+        <activity
+            android:name="com.store.promtech.WhyChooseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ReferandEarnActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.DelivereyTextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ReferralActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.OrganicBenefitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name="com.store.promtech.OrdercancellationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.SeasonalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity
+            android:name="com.store.promtech.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.Dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.MyProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.SubCategoryPage"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.SubSubCategoryPage"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ProductDetails"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.AboutUs"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.WhyChooseUsWithApi"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.TermsCondition"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.Privacy"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ProductCart"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.OrderCancellation"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.Replacement"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.Refund"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.EnquiryActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ContactUs"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.WhyChooseUs"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.CancelPolicy"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.SearchedProductPage"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ProductPage"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ShippingContent"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.OTPActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.MyOrderActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ProductOrderDetails"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.ReturnProductOrderDetails"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.store.promtech.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.store.promtech"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:node="remove"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="remove"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+</manifest>

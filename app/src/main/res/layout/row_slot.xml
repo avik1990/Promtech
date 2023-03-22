@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slot_bg"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp">
+
+
+    <TextView
+        android:id="@+id/tvSlot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_10sdp"
+        android:drawableLeft="@drawable/ic_access_time_black_24dp"
+        android:text="7 am  9 am"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

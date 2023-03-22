@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.store.promtech.LoginActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_othere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+
+
+
+        <RelativeLayout
+        android:id="@+id/rl_tracking"
+        android:background="@color/gray"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/green_circle"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/green_bar"/>
+                    <TextView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/green_circle"
+                        android:text="2"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/dark"/>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/gray_circle"
+                        android:text="3"
+                        android:gravity="center"
+                        android:textColor="@color/dark"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Place Order"
+                        android:gravity="left"
+                        android:textColor="@color/dark"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_8sdp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="#EEEDED"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Choose Delivery Schedule"
+                        android:gravity="center|top"
+                        android:textColor="@color/dark"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_8sdp"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="#EEEDED"/>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Checkout"
+                        android:gravity="right"
+                        android:textColor="@color/dark"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_8sdp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rl_tracking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:text="Select Pick Up Time"/>
+
+
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/tvDate"
+                android:layout_below="@+id/tvTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:text="Feb 22 ,2020"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvDateOne"
+                android:layout_below="@+id/tvTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:text=""/>
+            <LinearLayout
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/tvDate"
+                android:background="@color/black"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_above="@+id/llButton"
+                android:layout_below="@+id/view">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_slot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    >
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvEmptyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/button"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="nbmnbnmbnmbmn"
+                    android:textSize="@dimen/_14sdp"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+
+
+            <Button
+                android:id="@+id/btn_nextdate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@color/colorPrimary"
+                android:text="Next Day"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white" />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_prevdate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"
+                android:text="Today"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

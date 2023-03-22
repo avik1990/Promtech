@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Promtech Enterprises</string>
+    <string name="no_internet_msg">No Internet Connection</string>
+    <string name="base_url">https://www.promtechenterprises.com/webservice/</string>
+    <string name="share_pkg" translatable="false">Promtech \n Download now.\n\nhttps://play.google.com/store/apps/details?id= </string>
+    <string name="green_color">#043482</string>
+    <string name="telnumber">tel:+91 8777839293</string>
+    <string-array name="array">
+        <item>Earth</item>
+        <item>Moon</item>
+    </string-array>
+
+
+</resources>

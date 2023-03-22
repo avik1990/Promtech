@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/v_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingBottom="10dp">
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvquantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Quantity"
+            android:textColor="@color/black"
+            android:inputType="phone"
+            android:padding="@dimen/_4sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_toLeftOf="@+id/et_quantity"
+            android:layout_marginRight="@dimen/_10sdp"/>
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/et_quantity"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="quantity"
+            android:maxLength="2"
+            android:background="@drawable/boarder_bg"
+            android:inputType="phone"
+            android:padding="@dimen/_4sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_toLeftOf="@+id/cbox"
+            android:layout_marginRight="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:visibility="gone"
+            android:id="@+id/cbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Return"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_alignParentTop="true"/>
+        <LinearLayout
+            android:id="@+id/ll_parent"
+            android:layout_below="@+id/cbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/v_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <FrameLayout
+                    android:id="@+id/rl_v1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/iv_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ProgressBar
+                        android:visibility="gone"
+                        android:id="@+id/progressbar"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/rl_v1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/tv_productname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="title"
+                            android:textColor="@color/col_producttitle"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:gravity="center_vertical"
+                                android:text="Unit Price"
+                                android:textColor="@color/col_producttitle" />
+
+                            <TextView
+                                android:id="@+id/tv_unitprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:drawableLeft="@drawable/ic_rupee_indian"
+                                android:gravity="center_vertical"
+                                android:text=""
+                                android:textColor="@color/col_producttitle"
+
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="0dp"
+                                android:gravity="center_vertical"
+                                android:text="Required Quantity"
+                                android:textColor="@color/col_producttitle" />
+
+                            <TextView
+                                android:id="@+id/et_qty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:text=""
+                                android:textColor="@color/col_producttitle" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="0dp"
+                                android:gravity="center_vertical"
+                                android:text="Delivered Quantity"
+                                android:textColor="@color/col_producttitle" />
+
+                            <TextView
+                                android:id="@+id/et_delivered_qty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:text=""
+                                android:textColor="@color/col_producttitle" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Subtotal "
+                        android:textColor="@color/col_producttitle"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:drawableLeft="@drawable/ic_rupee_indian"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/col_producttitle"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="title"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="title"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+
+</androidx.cardview.widget.CardView>
+
+
+
+

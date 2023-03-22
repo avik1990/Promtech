@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_view_root"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:elevation="@dimen/_10sdp"
+    card_view:cardCornerRadius="@dimen/_10sdp">
+        <RelativeLayout
+            android:id="@+id/rl_mainbody"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <FrameLayout
+                android:id="@+id/v_img"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+                <LinearLayout
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                <ImageView
+                    android:id="@+id/iv_chefimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mainbody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_img"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_productname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:maxLines="2"
+                    android:textColor="@color/col_producttitle"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_docSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center_horizontal"
+                    android:text="Price will show after document submission"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_8sdp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_price_discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:drawableLeft="@drawable/ic_rupee_indian"
+                                android:drawableTint="@color/caldroid_black"
+                                android:textColor="@color/caldroid_black"
+                                android:textSize="@dimen/_20sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="MRP: "
+                                    android:textColor="@color/col_producttitle"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tv_price_orginal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/ic_rupee_indian"
+                                    android:drawableTint="@color/colorLogin"
+                                    android:textColor="@color/colorLogin"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_dis_percent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/_11sdp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/rounded_corner_btn_register"
+                        android:text="Add"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_cart_quantity"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_less" />
+
+                        <ImageView
+                            android:id="@+id/iv_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_more" />
+
+
+                        <TextView
+                            android:id="@+id/et_qty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_28sdp"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/_4sdp"
+                            android:paddingEnd="@dimen/_4sdp"
+                            android:text="1"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/tv_outof"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="Out of stock"
+                    android:textAllCaps="true"
+                    android:textColor="@color/caldroid_light_red"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
+</LinearLayout>
+
+
+
+

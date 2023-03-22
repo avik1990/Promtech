@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0061ff</color>
+    <color name="colorPrimaryDark">#043482</color>
+    <color name="colorAccent">#0061ff</color>
+    <color name="colorAccent2">#c41b1d</color>
+    <color name="button1">#c41b1d</color>
+    <color name="red">#1976D2</color>
+    <color name="red1">#ff3333</color>
+    <color name="reddark">#0061ff</color>
+
+    <color name="green">#1565C0</color>
+    <color name="green_toolbar">#0D47A1</color>
+    <color name="gray">#f0f0f0</color>
+    <color name="gray_divider">#888888</color>
+    <color name="green_bar">#0094ea</color>
+    <color name="yellow">#1976D2</color>
+    <color name="yellow1">#1976D2</color>
+    <color name="yellow_light">#1976D2</color>
+    <color name="orange">#FB641B</color>
+    <color name="colorLightYellow">#FCE4D2</color>
+    <color name="colorLogin">#0d9845</color>
+    <color name="colorScheduleOne">#0061ff</color>
+    <color name="colorScheduleTwo">#0061ff</color>
+    <color name="colorScheduleThree">#1976D2</color>
+
+    <color name="welcome_bg">#1976D2</color>
+    <color name="login_light_grey">#f0f0f0</color>
+    <color name="gplus">#1976D2</color>
+    <color name="fb">#0094ea</color>
+    <color name="dark_grey">#7a7a7a</color>
+    <color name="blue_text">#1976D2</color>
+    <color name="cololightgreen">#1976D2</color>
+    <color name="colorWab">#0094ea</color>
+
+    <color name="backgroundWhite">#e6e6e6</color>
+    <color name="colornormal">#9e9e9e</color>
+    <color name="backgroundBlue">#002f49</color>
+    <color name="button">#1976D2</color>
+    <color name="white">#ffffff</color>
+    <color name="light_pink">#f7dadf</color>
+
+    <color name="dark">#181818</color>
+    <!--<color name="black">#5E5D5D</color>-->
+    <color name="black">#444444</color>
+    <color name="blackHeading">#555555</color>
+    <color name="dash_eve">#424242</color>
+    <color name="btn_gray">#3a3a3a</color>
+    <color name="light_black">#dce0f7</color>
+
+
+    <color name="tooltip">#2f3293</color>
+    <color name="colorAccentLight">#1976D2</color>
+    <color name="colorLoginBottomGrey">#d1d1d1</color>
+    <color name="dash_not_grey">#e0e0e0</color>
+    <color name="dash_grey">#8a8a8a</color>
+    <color name="dash_noti_grey">#757575</color>
+    <color name="transparent_grey">#CCdddddd</color>
+    <color name="lightgrey">#4a4949</color>
+    <color name="grey">#888888</color>
+
+    <color name="light_grey">#dbdbdb</color>
+    <color name="nav_grey">#c5c5c5</color>
+    <color name="search_shadow_layout">#80000000</color>
+
+    <color name="route_textcolor">#c1c1c1</color>
+    <color name="grey_textcolor">#737373</color>
+
+    <color name="apptheme">#3F51B5</color>
+    <color name="bg_color">#b3909c</color>
+    <color name="bg_one">#7997e4</color>
+    <color name="bg_two">#c28815</color>
+
+    <color name="blue">#3F51B5</color>
+
+    <color name="caldroid_white">#FFFFFF</color>
+    <color name="caldroid_black">#555555</color>
+    <color name="caldroid_transparent">#00000000</color>
+    <!-- For settings framework -->
+    <color name="caldroid_lighter_gray">#ddd</color>
+    <color name="caldroid_gray">#CCC</color>
+    <color name="caldroid_darker_gray">#aaa</color>
+    <color name="caldroid_middle_gray">#888</color>
+    <!-- A light Holo shade of blue -->
+    <color name="caldroid_holo_blue_light">#ff33b5e5</color>
+    <color name="caldroid_holo_blue_light1">#ff86E5F7</color>
+    <!-- A dark Holo shade of blue -->
+    <color name="caldroid_holo_blue_dark">#ff0099cc</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="caldroid_sky_blue">#FFA3E8F7</color>
+
+    <color name="caldroid_333">#81007F</color>
+    <color name="caldroid_555">#9400d3</color>
+    <color name="caldroid_light_red">#FF0000</color>
+
+
+    <color name="col_producttitle">#555555</color>
+    <color name="col_brandname">#888888</color>
+    <color name="colortransBlue">#300094ea</color>
+    <color name="colorsloyone">#0094ea</color>
+    <color name="transparentblur">#70010101</color>
+    <color name="splashgreen">#0094ea</color>
+
+<!--    Light Green Colour Code: 94c51c-->
+<!--    Dark Green Colour Code: 3e5f06-->
+</resources>
