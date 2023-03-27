@@ -54,6 +54,10 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
     BaseResponse baseResponse;
     PostSuggession getPostSuggession;
     ViewSuggession getViewSuggession;
+    Interaction interaction1;
+    public interface Interaction {
+         void onCommentItemSelected(int position,MyOrders.OrderDatum data);
+    }
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -82,7 +86,7 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
         }
     }
 
-    public MyOrdersAdapter(List<MyOrders.OrderDatum> moviesList, Context mContext) {
+    public MyOrdersAdapter(List<MyOrders.OrderDatum> moviesList, Context mContext, Interaction interaction ) {
         this.moviesList = moviesList;
         this.mContext = mContext;
         progressDialog = new ProgressDialog(mContext);
@@ -95,7 +99,7 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
         pDialog.setMessage("Please Wait...");
         pDialog.setCanceledOnTouchOutside(false);
         pDialog.setCancelable(false);
-
+        this.interaction1 = interaction;
     }
 
     @Override
@@ -140,12 +144,14 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
          if (movie.getReturn_request_sent().equalsIgnoreCase("yes") && movie.getReturn_confirm().equalsIgnoreCase("Pending")){
              holder.btnReturnsend.setText("Return Request Pending");
              holder.btnReturnsend.setVisibility(View.VISIBLE);
+
          }else if(movie.getReturn_request_sent().equalsIgnoreCase("yes") && movie.getReturn_confirm().equalsIgnoreCase("No")) {
              holder.btnReturnsend.setText("Return Request Declined");
              holder.btnReturnsend.setVisibility(View.VISIBLE);
          }else if(movie.getReturn_request_sent().equalsIgnoreCase("yes") && movie.getReturn_confirm().equalsIgnoreCase("Yes")) {
              holder.btnReturnsend.setText("Return Request Approved");
              holder.btnReturnsend.setVisibility(View.VISIBLE);
+             holder.btnReturnsend.setOnClickListener(view -> interaction1.onCommentItemSelected(position, moviesList.get(position)));
          }else{
              holder.btnReturnsend.setVisibility(View.GONE);
          }

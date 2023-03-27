@@ -1,5 +1,6 @@
 package com.store.promtech.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 
@@ -54,7 +55,7 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.MyViewHolder
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, final int position) {
+    public void onBindViewHolder(final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
        final Brand.BrandDatum c = countryList.get(position);
 
         Picasso.with(mContext)

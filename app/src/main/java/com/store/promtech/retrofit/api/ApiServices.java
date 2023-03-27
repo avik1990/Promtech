@@ -53,6 +53,7 @@ import com.store.promtech.model.WhyChooseText;
 import com.store.promtech.model.WhyChooseUsmodel;
 import com.store.promtech.model.ZipCodeVerify;
 import com.store.promtech.model.ZipCodemodel;
+import com.store.promtech.productdialog.model.ReturnProductData;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -61,6 +62,12 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiServices {
+
+
+    @Headers("Cache-control: no-cache")
+    @GET("service.php?action=return_list")
+    Call<ReturnProductData> UserReturnedProducts(@Query("user_id") String user_id,
+                                                 @Query("order_id") String order_id);
 
     @Headers("Cache-control: no-cache")
     @GET("service.php?action=login")

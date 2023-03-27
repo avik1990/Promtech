@@ -1,5 +1,6 @@
 package com.store.promtech.adapter;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.store.promtech.OrderProductDetailsActivity;
 import com.store.promtech.R;
 import com.store.promtech.model.CartDeleteAction;
+import com.store.promtech.model.MyOrders;
 import com.store.promtech.model.MyOrdersDetailsModel;
 import com.store.promtech.utils.ConnectionDetector;
 
@@ -39,7 +41,12 @@ public class OrderedProductAdapter extends RecyclerView.Adapter<OrderedProductAd
     String cart_id = "";
     ConnectionDetector cd;
     CartDeleteAction cartDeleteAction;
+    Interaction interaction1;
 
+
+    public interface Interaction {
+        void onCommentItemSelected(int position, MyOrdersDetailsModel.CartDatum data);
+    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView tv_productname,tv_price, tv_position;
@@ -89,7 +96,7 @@ public class OrderedProductAdapter extends RecyclerView.Adapter<OrderedProductAd
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, final int position) {
+    public void onBindViewHolder(final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder1 = holder;
         movie = moviesList.get(position);
         holder.tv_productname.setText(movie.getProductNameEnglish());
