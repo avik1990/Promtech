@@ -119,7 +119,6 @@ public class OrderedProductAdapter extends RecyclerView.Adapter<OrderedProductAd
             holder.tv_discount.setVisibility(View.GONE);
         }*/
 
-
        holder.v_main.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
@@ -129,6 +128,7 @@ public class OrderedProductAdapter extends RecyclerView.Adapter<OrderedProductAd
                mContext.startActivity(i);
            }
        });
+
         holder.tv_position.setText(movie.getCartId());
 
         try {

@@ -142,16 +142,16 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
             holder.btnReturn.setVisibility(View.GONE);
         }
          if (movie.getReturn_request_sent().equalsIgnoreCase("yes") && movie.getReturn_confirm().equalsIgnoreCase("Pending")){
-             holder.btnReturnsend.setText("Return Request Pending");
+             holder.btnReturnsend.setText("Approval Pending");
              holder.btnReturnsend.setVisibility(View.VISIBLE);
-
          }else if(movie.getReturn_request_sent().equalsIgnoreCase("yes") && movie.getReturn_confirm().equalsIgnoreCase("No")) {
              holder.btnReturnsend.setText("Return Request Declined");
              holder.btnReturnsend.setVisibility(View.VISIBLE);
          }else if(movie.getReturn_request_sent().equalsIgnoreCase("yes") && movie.getReturn_confirm().equalsIgnoreCase("Yes")) {
-             holder.btnReturnsend.setText("Return Request Approved");
+             holder.btnReturnsend.setText("Returned Products List");
              holder.btnReturnsend.setVisibility(View.VISIBLE);
              holder.btnReturnsend.setOnClickListener(view -> interaction1.onCommentItemSelected(position, moviesList.get(position)));
+
          }else{
              holder.btnReturnsend.setVisibility(View.GONE);
          }
