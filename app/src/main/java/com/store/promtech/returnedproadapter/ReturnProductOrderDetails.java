@@ -167,26 +167,20 @@ public class ReturnProductOrderDetails extends AppCompatActivity implements View
             startActivity(i);
             finishAffinity();
         }else if (v == tv_return) {
-            if(returnArray.size()>0) {
-                for(int i=0; i<returnArray.size();i++) {
-                    if (returnArray.get(i).getQuentity().equals("0") || returnArray.get(i).getQuentity().equals("0")) {
-                        Utility.showToastShort(getApplicationContext(), "Please enter quantity");
-                        return;
+            if(cd.isConnected()){
+                if(returnArray.size()>0) {
+                    for(int i=0; i<returnArray.size();i++) {
+                        if (returnArray.get(i).getQuentity().equals("0") || returnArray.get(i).getQuentity().isEmpty()) {
+                            Utility.showToastShort(getApplicationContext(), "Please enter quantity");
+                            return;
+                        }
                     }
+                    loadReturn();
+                }else{
+                    Utility.showToastShort(getApplicationContext(),"Please select product to return");
                 }
-
-                String returnProducts="";
-                if (returnArray.size()>0) {
-                    for (int i = 0; i < returnArray.size(); i++) {
-                        returnProducts = returnProducts+returnArray.get(i).getProduct_id()+","+returnArray.get(i).getQuentity()+"||";
-                        Log.i("returnProducts", returnProducts);
-                    }
-                }
-
-               // loadReturn();
-            }else{
-                Utility.showToastShort(getApplicationContext(),"Please select product to return");
             }
+
         }
     }
 
@@ -336,7 +330,6 @@ public class ReturnProductOrderDetails extends AppCompatActivity implements View
 
     @Override
     public void onItemChecked(int position, MyOrdersDetailsModel.CartDatum data,int flag,int tempdata) {
-        Toast.makeText(mContext,position+": "+data.getProductId()+" :"+tempdata,Toast.LENGTH_SHORT).show();
        if(flag == 1){
            returnArray.add(new ReturnList(data.getProductId(), String.valueOf(tempdata)));
        }else {

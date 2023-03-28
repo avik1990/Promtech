@@ -102,7 +102,7 @@ public class ReturnProductAdapter extends RecyclerView.Adapter<ReturnProductAdap
     @Override
     public void onBindViewHolder(final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         movie = moviesList.get(position);
-       // holder.setIsRecyclable(false);
+        holder.setIsRecyclable(false);
         holder.cbox.setVisibility(View.VISIBLE);
         holder.tv_productname.setText(movie.getProductNameEnglish() +" "+movie.getProductId());
         holder.tv_id.setText(movie.getProductId());
@@ -144,7 +144,6 @@ public class ReturnProductAdapter extends RecyclerView.Adapter<ReturnProductAdap
         });
 
         if(holder.et_quantity.isFocusable()){
-
             holder.et_quantity.addTextChangedListener(new TextWatcher() {
                 boolean isOnTextChanged = false;
 
