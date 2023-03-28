@@ -59,11 +59,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
+                android:textStyle="bold"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:maxLines="2"
                 android:text="JHON DOE"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="@dimen/_9sdp" />
 
             <TextView
                 android:id="@+id/tv_returnquantity"

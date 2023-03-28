@@ -105,7 +105,12 @@ public class ReturnedProductDialog extends DialogFragment {
                     returnedProduct = response.body();
                     if(returnedProduct.getAck() == 1) {
                         tvReturnAmt.setText("Returned Amount: \u20B9"+String.valueOf(returnedProduct.getReturnPriceData().getReturnAmount()));
-                        setData(returnedProduct.getReturnProductData());
+                       if(returnedProduct.getReturnProductData()!=null) {
+                           setData(returnedProduct.getReturnProductData());
+                       }else{
+                           Toast.makeText(context,"No Product List",Toast.LENGTH_SHORT).show();
+                            dismiss();
+                       }
                     }
                 }
             }

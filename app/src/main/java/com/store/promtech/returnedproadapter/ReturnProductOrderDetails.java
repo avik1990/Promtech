@@ -1,4 +1,4 @@
-package com.store.promtech;
+package com.store.promtech.returnedproadapter;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -12,8 +12,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.store.promtech.adapter.ReturnProductAdapter;
+import com.store.promtech.Dashboard;
+import com.store.promtech.LoginActivity;
+import com.store.promtech.R;
+import com.store.promtech.returnedproadapter.ReturnProductAdapter;
 import com.store.promtech.model.MyOrdersDetailsModel;
 import com.store.promtech.model.ReturnList;
 import com.store.promtech.model.ZipCodeVerify;
@@ -23,6 +27,7 @@ import com.store.promtech.utils.Preferences;
 import com.store.promtech.utils.Utility;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,7 +38,7 @@ import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ReturnProductOrderDetails extends AppCompatActivity implements View.OnClickListener {
+public class ReturnProductOrderDetails extends AppCompatActivity implements View.OnClickListener,ReturnProductAdapter.Interaction {
 
     Context mContext;
     ImageView btn_menu, btn_back;
@@ -56,7 +61,7 @@ public class ReturnProductOrderDetails extends AppCompatActivity implements View
     TextView tv_delivery,tv_return;
     String isQuickDelivery = "0", order_id;
     public  static MyOrdersDetailsModel getMyoderDetailsModel;
-    public static ArrayList<ReturnList> returnArray = new ArrayList<>();
+    private ArrayList<ReturnList> returnArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +69,7 @@ public class ReturnProductOrderDetails extends AppCompatActivity implements View
         setContentView(R.layout.activity_return_order);
         cd = new ConnectionDetector(mContext);
         mContext = this;
+        returnArray.clear();
         cd = new ConnectionDetector(mContext);
         pDialog = new ProgressDialog(mContext);
         pDialog.setMessage("Loading...");
@@ -163,12 +169,21 @@ public class ReturnProductOrderDetails extends AppCompatActivity implements View
         }else if (v == tv_return) {
             if(returnArray.size()>0) {
                 for(int i=0; i<returnArray.size();i++) {
-                    if (returnArray.get(i).getQuentity().equals("0")) {
+                    if (returnArray.get(i).getQuentity().equals("0") || returnArray.get(i).getQuentity().equals("0")) {
                         Utility.showToastShort(getApplicationContext(), "Please enter quantity");
                         return;
                     }
                 }
-                loadReturn();
+
+                String returnProducts="";
+                if (returnArray.size()>0) {
+                    for (int i = 0; i < returnArray.size(); i++) {
+                        returnProducts = returnProducts+returnArray.get(i).getProduct_id()+","+returnArray.get(i).getQuentity()+"||";
+                        Log.i("returnProducts", returnProducts);
+                    }
+                }
+
+               // loadReturn();
             }else{
                 Utility.showToastShort(getApplicationContext(),"Please select product to return");
             }
@@ -227,7 +242,7 @@ public class ReturnProductOrderDetails extends AppCompatActivity implements View
         try {
 
             if (listmycart.size() > 0) {
-                ReturnProductAdapter mAdapter = new ReturnProductAdapter(listmycart, mContext);
+                ReturnProductAdapter mAdapter = new ReturnProductAdapter(listmycart, mContext,this::onItemChecked);
                 rl_cart.setAdapter(mAdapter);
                 mAdapter.notifyDataSetChanged();
 
@@ -317,5 +332,26 @@ public class ReturnProductOrderDetails extends AppCompatActivity implements View
                 pDialog.dismiss();
             }
         });
+    }
+
+    @Override
+    public void onItemChecked(int position, MyOrdersDetailsModel.CartDatum data,int flag,int tempdata) {
+        Toast.makeText(mContext,position+": "+data.getProductId()+" :"+tempdata,Toast.LENGTH_SHORT).show();
+       if(flag == 1){
+           returnArray.add(new ReturnList(data.getProductId(), String.valueOf(tempdata)));
+       }else {
+           Iterator<ReturnList> iter = returnArray.iterator();
+           while (iter.hasNext())
+           {
+               ReturnList user = iter.next();
+               if(user.getProduct_id().equals(data.getProductId()))
+               {
+                   //Use iterator to remove this User object.
+                   iter.remove();
+               }
+           }
+           //returnArray.remove(position);
+       }
+
     }
 }

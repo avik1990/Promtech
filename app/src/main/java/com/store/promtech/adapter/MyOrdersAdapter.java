@@ -23,7 +23,7 @@ import com.store.promtech.MyOrderActivity;
 import com.store.promtech.ProductOrderDetails;
 
 import com.store.promtech.R;
-import com.store.promtech.ReturnProductOrderDetails;
+import com.store.promtech.returnedproadapter.ReturnProductOrderDetails;
 import com.store.promtech.model.BaseResponse;
 import com.store.promtech.model.MyOrders;
 import com.store.promtech.model.PostSuggession;

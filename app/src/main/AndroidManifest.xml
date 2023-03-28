@@ -299,7 +299,7 @@
             android:theme="@style/AppTheme.NoActionBar.NoTranslucent"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name="com.store.promtech.ReturnProductOrderDetails"
+            android:name="com.store.promtech.returnedproadapter.ReturnProductOrderDetails"
             android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar.NoTranslucent"

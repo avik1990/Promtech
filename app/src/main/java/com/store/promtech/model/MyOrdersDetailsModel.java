@@ -328,6 +328,9 @@ public class MyOrdersDetailsModel {
 
     public class CartDatum {
 
+        private boolean isSelectes = false;
+
+        private String tempQuantity = "0";
         @SerializedName("cart_id")
         @Expose
         private String cartId;
@@ -362,6 +365,22 @@ public class MyOrdersDetailsModel {
         @SerializedName("delivered_quantity")
         @Expose
         private String delivered_quantity;
+
+        public boolean isSelectes() {
+            return isSelectes;
+        }
+
+        public void setSelectes(boolean selectes) {
+            isSelectes = selectes;
+        }
+
+        public String getTempQuantity() {
+            return tempQuantity;
+        }
+
+        public void setTempQuantity(String tempQuantity) {
+            this.tempQuantity = tempQuantity;
+        }
 
         public String getCartId() {
             return cartId;
