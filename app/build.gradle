@@ -7,8 +7,8 @@ android {
         applicationId "com.store.promtech"
         minSdkVersion 24
         targetSdkVersion 31
-        versionCode 5
-        versionName "1.5"
+        versionCode 6
+        versionName "1.6"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
     }

@@ -104,7 +104,7 @@ public class ReturnedProductDialog extends DialogFragment {
                     pDialog.dismiss();
                     returnedProduct = response.body();
                     if(returnedProduct.getAck() == 1) {
-                        tvReturnAmt.setText("Returned Amount: \u20B9"+String.valueOf(returnedProduct.getReturnPriceData().getReturnAmount()));
+                        tvReturnAmt.setText("Refund Amount: \u20B9"+String.valueOf(returnedProduct.getReturnPriceData().getReturnAmount()));
                        if(returnedProduct.getReturnProductData()!=null) {
                            setData(returnedProduct.getReturnProductData());
                        }else{
